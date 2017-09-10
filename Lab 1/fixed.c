@@ -75,7 +75,20 @@ void ST7735_uBinOut8(uint32_t n);
  Outputs: none
  assumes minX < maxX, and miny < maxY
 */
+int Y_Range;
+int X_Range;
+int max_X;
+int min_X;
+int max_Y;
+int min_Y;
+
 void ST7735_XYplotInit(char *title, int32_t minX, int32_t maxX, int32_t minY, int32_t maxY){
+	Y_Range=maxY-minY;
+	X_Range=maxX-minX;
+	max_X=maxX;
+	min_X=minX;
+	max_Y=maxY;
+	min_Y=minY;
 	ST7735_SetCursor(0,0);
 	ST7735_FillScreen(ST7735_BLACK);
 	ST7735_OutString(title);
