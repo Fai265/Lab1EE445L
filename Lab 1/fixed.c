@@ -70,7 +70,7 @@ void ST7735_uBinOut8(uint32_t n);
  Inputs:  title  ASCII string to label the plot, null-termination
           minX   smallest X data value allowed, resolution= 0.001
           maxX   largest X data value allowed, resolution= 0.001
-          minY   smallest Y data value allowed, resolution= 0.001
+          minY   smallest Y data value allowed, resolution= 0.001 
           maxY   largest Y data value allowed, resolution= 0.001
  Outputs: none
  assumes minX < maxX, and miny < maxY
