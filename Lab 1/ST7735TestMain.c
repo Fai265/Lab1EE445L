@@ -72,7 +72,7 @@
 #include <stdint.h>
 #include "ST7735.h"
 #include "PLL.h"
-#include "../inc/tm4c123gh6pm.h"
+#include "tm4c123gh6pm.h"
 #include "fixed.h" 
 
 void DelayWait10ms(uint32_t n);
@@ -545,7 +545,7 @@ int main(void){  // main 2
 	ST7735_sDecOut3(234);
 	ST7735_sDecOut3(34);
 	ST7735_sDecOut3(4);
-	//ST7735_XYplotInit("Test", 0, 132, 30, 160);
+	ST7735_XYplotInit("Test", 0, 132, 30, 160);
 	
 	return 1;
 	/*

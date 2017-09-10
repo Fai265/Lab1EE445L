@@ -76,9 +76,12 @@ void ST7735_uBinOut8(uint32_t n);
  assumes minX < maxX, and miny < maxY
 */
 void ST7735_XYplotInit(char *title, int32_t minX, int32_t maxX, int32_t minY, int32_t maxY){
+	ST7735_SetCursor(0,0);
+	ST7735_FillScreen(ST7735_BLACK);
 	ST7735_OutString(title);
 	ST7735_OutChar('\n');
-	ST7735_FillRect(minX, minY, (maxX-minX), (maxY-minY), ST7735_WHITE);
+	ST7735_FillRect(0, 32, 128, 128, ST7735_Color565(228,228,228));
+	//ST7735_FillRect(minX, minY, (maxX-minX), (maxY-minY), ST7735_WHITE);
 }
 /**************ST7735_XYplot***************
  Plot an array of (x,y) data
