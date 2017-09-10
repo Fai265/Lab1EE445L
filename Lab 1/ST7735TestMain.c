@@ -535,12 +535,17 @@ int main7(void){ int i; // main 7
 }
 int main(void){  // main 2
   int x, y, dx, dy;
-//  uint8_t red, green, blue;
+//  uint8_t red, green, blue;asdf
   PLL_Init(Bus80MHz);                  // set system clock to 80 MHz
   // test DrawChar() and DrawCharS()
   ST7735_InitR(INITR_REDTAB);
 	ST7735_sDecOut3(1234);
-	ST7735_XYplotInit("Test", 0, 132, 30, 160);
+	ST7735_sDecOut3(-1234);
+	ST7735_sDecOut3(11234);
+	ST7735_sDecOut3(234);
+	ST7735_sDecOut3(34);
+	ST7735_sDecOut3(4);
+	//ST7735_XYplotInit("Test", 0, 132, 30, 160);
 	
 	return 1;
 	/*

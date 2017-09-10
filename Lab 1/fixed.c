@@ -24,14 +24,14 @@ Parameter LCD display
  */ 
  
 void ST7735_sDecOut3(int32_t n){
-	char output_string[]=" *.***";
+	char output_string[]=" *.***\n";
 	int test;
 	if((n<=9999 && n>=-9999)){
 		if(n>-1) output_string[0]=' ';
 		else output_string[0]='-';
 	for(int i=5;i>0;i--){ //goes from the back of the fixed-point number to the front
 		if(i!=2){
-			test=n%10;
+			test=abs(n%10);
 			output_string[i]=(char)(test+48); //converts number to ASCII
 			n/=10;
 		}
